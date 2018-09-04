@@ -1,11 +1,17 @@
 const express = require('express')
-
+const bodyParser = require('body-parser')
+const multer = require('multer')
 const app = express();
 
-app.use(express.static('static/'))
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+// app.use(multer()); // for parsing multipart/form-data
+
+app.use(express.static('static/'));
+
 
 const config = {
-    port: 3000,
+    port: 8000,
     host: ''
 }
 const server = app.listen(config.port, function() {
