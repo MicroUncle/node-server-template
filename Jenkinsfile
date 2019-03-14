@@ -17,8 +17,6 @@ pipeline {
             steps {
                 sh "npm install -g pm2"
                 sh "pm2 start index.js"
-                input message: 'Finished using the web site?(Click "proceed" to continue)'
-                sh "exit"
             }
         }
     }
