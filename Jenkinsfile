@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image "node:8-alpine"
-            args "-p 3000:8000 --rm --name=node-server"
+            args "-p 3000:8000 -d --name=node-server"
         }
     }
     stages {
