@@ -16,7 +16,7 @@ pipeline {
         stage("Deliver") {
             steps {
                 sh "npm install -g pm2"
-                sh "pm2 start --no-daemon index.js"
+                sh "pm2 start index.js"
             }
         }
     }
