@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+                sh "npm install nrm"
+                sh "nrm use cnpm"
                 sh "npm install"
             }
         }
