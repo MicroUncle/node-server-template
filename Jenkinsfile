@@ -15,7 +15,8 @@ pipeline {
         }
         stage("Deliver") {
             steps {
-                sh "npm start"
+                sh "npm install -g pm2"
+                sh "pm2 start index"
             }
         }
     }
