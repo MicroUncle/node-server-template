@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image "node:8-alpine"
-            args "-p 3000:8000 -d --name=node-server"
+            args "-p 3000:8000 -itd --name=node-server"
         }
     }
     stages {
@@ -15,8 +15,8 @@ pipeline {
         }
         stage("Deliver") {
             steps {
-                sh "npm install -g pm2-docker"
-                sh "pm2-docker start index.js"
+                sh "npm install -g pm2"
+                sh "pm2 start index.js"
             }
         }
     }
