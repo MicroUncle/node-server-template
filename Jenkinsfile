@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
+                sh "docker exec -ti node-server bash"
                 sh "npm install -g nrm"
                 sh "nrm use cnpm"
                 sh "npm install"
