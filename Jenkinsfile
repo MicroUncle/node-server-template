@@ -1,20 +1,14 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
     stages {
         stage("Build") {
             steps {
-                sh "npm install -g nrm"
-                sh "nrm use cnpm"
-                sh "npm install"
+                sh "./jenkins/buile.sh"
             }
         }
         stage("Deliver") {
             steps {
-                sh "npm install -g pm2"
-                sh "pm2 start index.js"
-                input message: '点击中止'
+                sh "./jenkins/start.sh"
             }
         }
     }
