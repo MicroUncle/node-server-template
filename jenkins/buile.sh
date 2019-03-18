@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --no-cache --rm -f ./docker -t node-server ./
+docker build --no-cache --rm -f ./dockerfile -t node-server ./
