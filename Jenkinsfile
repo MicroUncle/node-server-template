@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        dockerfile true
+        docker {
+            image "node:8-alpine",
+            args "-p 3120:3120 -tid --rm"
+        }
     }
     stages {
         stage("Build") {
