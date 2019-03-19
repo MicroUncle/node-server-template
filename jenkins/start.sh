@@ -1,2 +1,5 @@
 #!/bin/bash
-docker run -itd --rm --name=node-server -p 3120:3120 node-server
+name = $PKG_NAME
+version = $VERSION
+docker container rm -f $name
+docker run -itd --rm --name=$name -p 3120:3120 $name:$version

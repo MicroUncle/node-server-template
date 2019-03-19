@@ -1,3 +1,5 @@
 #!/bin/bash
-docker rmi node-server || true
-docker build --no-cache --rm  -t node-server ./
+name = $PKG_NAME
+version = $VERSION
+docker rmi -f $name || true
+docker build --no-cache --rm  -t $name:$version ./
