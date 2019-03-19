@@ -1,6 +1,6 @@
 FROM node:8-alpine
 WORKDIR /data-nodejs
-COPY package.json /data-node-js/
+COPY package.json /data-node-js/package.json
 RUN npm install
 COPY . /data-nodejs
 # RUN npm install -g nrm \
