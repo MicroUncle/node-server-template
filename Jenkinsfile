@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        PKG_NAME: 'node-server'
-        VERSION: '0.0.1'
+        PKG_NAME = 'node-server'
+        VERSION = '0.0.1'
     }
     stages {
         stage("Build") {
