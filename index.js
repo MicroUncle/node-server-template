@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.use(express.static('static/'));
 
-
+app.get('/lucky', function(req, res) {
+    return res.send('U are the lucky gay!, is not it ?')
+})
 const config = {
     port: 3120,
     host: ''
