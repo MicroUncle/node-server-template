@@ -1,2 +1,3 @@
 #!/bin/bash
-docker build --no-cache --rm -f ./dockerfile -t node-server ./
+docker rmi node-server || true
+docker build --no-cache --rm  -t node-server ./
