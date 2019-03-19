@@ -6,4 +6,4 @@ RUN npm install -g nrm \
     && npm install \
     && npm install -g pm2
 EXPOSE 3120
-CMD pm2 start index.js
+CMD ["pm2-runtime", "start", "index.js"]
