@@ -11,7 +11,7 @@ app.use(express.static('static/'));
 
 
 const config = {
-    port: 8000,
+    port: Number(process.env.env) || 8000,
     host: ''
 }
 const server = app.listen(config.port, function() {
